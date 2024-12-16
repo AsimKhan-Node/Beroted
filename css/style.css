@@ -255,118 +255,140 @@ body{
   }
 /*------ header end----*/
 }
-/*---- Shop stert -----*/
-.Shop {
+/*---- wrapper stert -----*/
+.wrapper {
   width: 100%;
   height: auto;
-  padding: 16px 0;
-  border-bottom: 0.5px solid #1E1E1E;
+  padding: 18px 0px;
 }
-.Shop .inner {
+nav {
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+}
+nav > ul {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.Shop_des ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  list-style: none;
-  gap: 24px;  
-}
-.Shop_des ul a {
+nav a {
+  display: block;
   color: #181616;
-  text-align: center;
   font-family: 'Gilroy-Bold', sans-serif;
   text-decoration: none;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 100%; 
+  line-height: 100%;
+  text-transform: uppercase;
 }
-/*---- Shop end -----*/
-.Shop .Shop-item .Shop-item-description-wrapper .Shop-item-description {
-  display: none;
+nav ul li {
+  color: #fff;
+  list-style: none;
+  transition: 0.5s;
 }
-.Shop-item-header {
-  display: none;
+ul img {
+  width: 85%;
+}
+nav > ul > li > a {
+  padding: 15px 25px;
+}
+nav ul > li .dropdown > a:after {
+  position: relative;
+  content: '';  
+  float: right;
+  margin-left: 10px;
+  margin-right: 8px;
+}
+nav > ul > li:hover{
+  background: #f3430d;
+
+}
+nav ul .menu-area {
+  padding: 40px 40px 0 40px;
+  background: #fcf4eb;
+  text-align: left;
+  border-top: 5px solid #164c82;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.6);
+  z-index: 1;
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  top: -9999px;
+  left: 0;
+}
+nav ul li:hover ul.menu-area {
+  top: 100%;
+}
+nav ul .menu-area ul {
+  width: 25%;
+  margin-bottom: 40px;
+  color: #262626;
+}
+nav ul.menu-area h4 {
+  color: #161515;
+  font-family: 'Gilroy-Bold', sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+
+}
+nav ul .menu-area ul li a {
+  margin-top: 10px;
+  color: #000;
+  text-transform: none;
+
+}
+/*---- wrapper end -----*/
+@media screen and (max-width: 991px) {
+/*---- wrapper stert -----*/ 
+.wrapper {
+  padding: 13px 0px;
+}
+nav > ul > li > a {
+  padding: 12px 13px;
+}
+nav a {
+  font-size: 12px;
+}
+nav ul.menu-area h4 {
+  font-size: 12px;
+  margin-bottom: 15px;
+}
+nav ul .menu-area {
+  padding: 25px 25px 0 25px;
+}
+/*------ wrapper end----*/
 }
 @media screen and (max-width: 767px) {
-/*---- Shop stert -----*/
-.Shop {
-  padding: 13px 0;
-}
-.Shop .container {
+/*---- wrapper stert -----*/
+.wrapper .container {
   padding: 0 20px;
 }
-.Shop_des {
-  width: 100%;
-}
-.Shop_des ul {
+nav > ul {
   flex-direction: column;
-  gap: 14px;
-}
-.Shop-item {
   width: 100%;
-  border-bottom: 1px solid #534f4f;
 }
-.Shop .Shop-item .Shop-item-description-wrapper hr {
-  border: none;
-  border-top: 1px solid var(--border-color);
-  visibility: visible;
+nav ul .menu-area ul {
+  width: 100%;
+  margin-bottom: 40px;
+  color: #262626;
 }
-
-.Shop .Shop-item.open .Shop-item-description-wrapper hr {
-  visibility: visible;
+nav ul.menu-area h4 {
+  font-size: 20px;
+  margin-bottom: 15px;
 }
-.Shop .Shop-item .Shop-item-header .Shop-item-header-title {
-  font-weight: 600;
+nav a {
+  font-size: 16px;
 }
-
-.Shop .Shop-item .Shop-item-header .Shop-item-header-icon {
-  transition: var(--transition);
+/*------ wrapper end----*/
 }
 
-.Shop
-  .Shop-item.open
-  .Shop-item-header
-  .Shop-item-header-icon {
-  transform: rotate(-180deg);
-}
-
-.Shop .Shop-item .Shop-item-description-wrapper {
-  display: grid;
-  grid-template-rows: 0fr;
-  overflow: hidden;
-  transition: var(--transition);
-}
-
-.Shop .Shop-item.open .Shop-item-description-wrapper {
-  grid-template-rows: 1fr;
-}
-
-.Shop
-  .Shop-item
-  .Shop-item-description-wrapper
-  .Shop-item-description {
-  min-height: 0;
-}
-.Shop_news {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.Shop .Shop-item .Shop-item-description-wrapper .Shop-item-description {
-  min-height: 0;
-  display: block;
-  text-align: center;
-  margin: 0 auto;
-}
-.Shop-item-header {
-  display: block;
-}
-/*---- Shop end -----*/
-}
 /*---- banner stert -----*/
 .banner {
   width: 100%;
@@ -421,7 +443,6 @@ body{
   display: flex;
   width: 209.063px;
   height: 49.401px;
-  padding: 0px 24px;
   justify-content: center;
   align-items: center;
   gap: 8px;
@@ -437,12 +458,16 @@ body{
   font-style: normal;
   font-weight: 400;
   line-height: 100%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .banner_ourselv {
   display: flex;
   width: 209.063px;
   height: 49.401px;
-  padding: 0px 24px;
   justify-content: center;
   align-items: center;
   gap: 8px;
@@ -458,6 +483,11 @@ body{
   font-style: normal;
   font-weight: 400;
   line-height: 100%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .banner_them {
   display: flex;
@@ -487,7 +517,6 @@ body{
 .banner_dilnt {
   width: 188.063px;
   height: 46.401px;
-  padding: 0px 20px;
 }
 .banner_dilnt a {
   font-size: 15px;
@@ -495,7 +524,6 @@ body{
 .banner_ourselv {
   width: 188.063px;
   height: 46.401px;
-  padding: 0px 20px;
 }
 .banner_ourselv a {
   font-size: 15px;
@@ -569,7 +597,6 @@ body{
 .banner_dilnt {
   width: 200.063px;
   height: 49.401px;
-  padding: 0px 24px;
 }
 .banner_dilnt a {
   font-size: 16px;
@@ -577,7 +604,6 @@ body{
 .banner_ourselv {
   width: 205.063px;
   height: 49.401px;
-  padding: 0px 24px;
 }
 .banner_ourselv a {
   font-size: 16px;
@@ -835,7 +861,6 @@ body{
   display: flex;
   width: 325px;
   height: 49px;
-  padding: 0px 24px;
   justify-content: center;
   align-items: center;
   gap: 8px;
@@ -845,6 +870,11 @@ body{
   background: #FCF4EB;
 }
 .Sellers_btn a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
   color: #000;
   font-family: 'Gilroy-Bold', sans-serif;
   text-decoration: none;
@@ -877,7 +907,6 @@ body{
 .Sellers_btn {
   width: 219px;
   height: 47px;
-  padding: 0px 24px;
   gap: 8px;
 }
 /*------ Sellers end----*/
@@ -898,7 +927,6 @@ body{
 .Sellers_btn {
   width: 327px;
   height: 49px;
-  padding: 0px 24px;
   gap: 8px;
 }
 /*------ Sellers end----*/
@@ -1582,15 +1610,21 @@ video::-webkit-media-controls {
 }
 .Woman_someth {
   display: flex;
-  padding: 17px 43px;
   justify-content: center;
   align-items: center;
+  width: 208.773px;
+  height: 49.401px;
   gap: 8px;
   flex-shrink: 0;
   border-radius: 6px;
   background: #D24C2B;
 }
 .Woman_someth a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
   color: #FFF;
   font-family: 'Gilroy-Bold', sans-serif;
   text-decoration: none;
@@ -1601,9 +1635,10 @@ video::-webkit-media-controls {
 }
 .Woman_abou {
   display: flex;
-  padding: 16px 60px;
   justify-content: center;
   align-items: center;
+  width: 208.773px;
+  height: 49.401px;  
   gap: 8px;
   flex-shrink: 0;
   border-radius: 6px;
@@ -1611,6 +1646,11 @@ video::-webkit-media-controls {
   background: #FCF4EB;
 }
 .Woman_abou a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
   color: #000;
   font-family: 'Gilroy-Bold', sans-serif;
   text-decoration: none;
@@ -1680,9 +1720,6 @@ video::-webkit-media-controls {
 }
 .Woman_seller {
   flex-direction: column;
-}
-.Woman_abou {
-  padding: 16px 72px;
 }
 /*------ Woman end----*/
 }
@@ -1869,11 +1906,17 @@ video::-webkit-media-controls {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 15px 25px;
+  width: 100%;
+  height: 53px;
   border-radius: 10px;
   background-color: #D24C2B;
 }
 .footer_btn a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
   color: #FFF;
   font-family: 'Gilroy-Bold', sans-serif;
   text-decoration: none;
@@ -2321,6 +2364,11 @@ input[type="checkbox" i] {
   background: #D24C2B;
 }
 .PLANNERS-btn a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
   color: #FDFAF8;
   text-align: center;
   font-family: 'Gilroy-Bold', sans-serif;
@@ -2419,14 +2467,19 @@ input[type="checkbox" i] {
 .PLANNERS_notebook {
   display: flex;
   justify-content: center;
-  padding: 15px 50px;
+  width: 198px;
+  height: 63px;
   align-items: center;
   gap: 10px;
-  flex: 1 0 0;
   border-radius: 6px;
   border: 1px solid #000;
 }
 .PLANNERS_notebook a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
   color: #000;
   text-align: center;
   font-family: 'Gilroy-Bold', sans-serif;
@@ -2556,7 +2609,8 @@ input[type="checkbox" i] {
   font-size: 16px;
 }
 .PLANNERS_notebook {
-  padding: 13px 23px;
+  width: 136px;
+  height: 53px;
   gap: 7px;
 }
 /*------ PLANNERS end----*/
@@ -2662,7 +2716,8 @@ input[type="checkbox" i] {
   gap: 17px;
 }
 .PLANNERS_notebook {
-  padding: 16px 122px;
+  width: 185px;
+  height: 53px;
   gap: 7px;
 }
 /*------ PLANNERS end----*/
