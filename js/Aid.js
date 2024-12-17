@@ -5,6 +5,8 @@ function openmenu(){
 function closemenu(){
   sidemenu.style.left = "-100%";
 }
+
+
 setTimeout(() => {
   document.querySelector(".loader").style.transform = "translateY(-100%)";
   document.querySelector(".loader").style.opacity = ".6";

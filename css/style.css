@@ -261,18 +261,18 @@ body{
   height: auto;
   padding: 18px 0px;
 }
-nav {
+.wrapper-nav {
   font-size: 20px;
   display: flex;
   justify-content: center;
 }
-nav > ul {
+.wrapper-nav > ul {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-nav a {
+.wrapper-nav a {
   display: block;
   color: #181616;
   font-family: 'Gilroy-Bold', sans-serif;
@@ -283,7 +283,7 @@ nav a {
   line-height: 100%;
   text-transform: uppercase;
 }
-nav ul li {
+.wrapper-nav ul li {
   color: #fff;
   list-style: none;
   transition: 0.5s;
@@ -291,21 +291,21 @@ nav ul li {
 ul img {
   width: 85%;
 }
-nav > ul > li > a {
+.wrapper-nav > ul > li > a {
   padding: 15px 25px;
 }
-nav ul > li .dropdown > a:after {
+.wrapper-nav ul > li .dropdown > a:after {
   position: relative;
   content: '';  
   float: right;
   margin-left: 10px;
   margin-right: 8px;
 }
-nav > ul > li:hover{
+.wrapper-nav > ul > li:hover{
   background: #f3430d;
 
 }
-nav ul .menu-area {
+.wrapper-nav ul .menu-area {
   padding: 40px 40px 0 40px;
   background: #fcf4eb;
   text-align: left;
@@ -319,15 +319,15 @@ nav ul .menu-area {
   top: -9999px;
   left: 0;
 }
-nav ul li:hover ul.menu-area {
+.wrapper-nav ul li:hover ul.menu-area {
   top: 100%;
 }
-nav ul .menu-area ul {
+.wrapper-nav ul .menu-area ul {
   width: 25%;
   margin-bottom: 40px;
   color: #262626;
 }
-nav ul.menu-area h4 {
+.wrapper-nav ul.menu-area h4 {
   color: #161515;
   font-family: 'Gilroy-Bold', sans-serif;
   font-size: 20px;
@@ -338,7 +338,7 @@ nav ul.menu-area h4 {
   text-transform: uppercase;
 
 }
-nav ul .menu-area ul li a {
+.wrapper-nav ul .menu-area ul li a {
   margin-top: 10px;
   color: #000;
   text-transform: none;
@@ -350,17 +350,17 @@ nav ul .menu-area ul li a {
 .wrapper {
   padding: 13px 0px;
 }
-nav > ul > li > a {
+.wrapper-nav > ul > li > a {
   padding: 12px 13px;
 }
-nav a {
+.wrapper-nav a {
   font-size: 12px;
 }
-nav ul.menu-area h4 {
+.wrapper-nav ul.menu-area h4 {
   font-size: 12px;
   margin-bottom: 15px;
 }
-nav ul .menu-area {
+.wrapper-nav ul .menu-area {
   padding: 25px 25px 0 25px;
 }
 /*------ wrapper end----*/
@@ -370,25 +370,24 @@ nav ul .menu-area {
 .wrapper .container {
   padding: 0 20px;
 }
-nav > ul {
+.wrapper-nav > ul {
   flex-direction: column;
   width: 100%;
 }
-nav ul .menu-area ul {
+.wrapper-nav ul .menu-area ul {
   width: 100%;
   margin-bottom: 40px;
   color: #262626;
 }
-nav ul.menu-area h4 {
+.wrapper-nav ul.menu-area h4 {
   font-size: 20px;
   margin-bottom: 15px;
 }
-nav a {
+.wrapper-nav a {
   font-size: 16px;
 }
 /*------ wrapper end----*/
 }
-
 /*---- banner stert -----*/
 .banner {
   width: 100%;
@@ -449,6 +448,10 @@ nav a {
   flex-shrink: 0;
   border-radius: 6px;
   background: #FFF;
+  transition: 0.5s;
+}
+.banner_dilnt:hover {
+  background: #E9522E;
 }
 .banner_dilnt a {
   color: #000;
@@ -464,6 +467,9 @@ nav a {
   justify-content: center;
   align-items: center;
 }
+.banner_ourselv:hover {
+  background: #E9522E;
+}
 .banner_ourselv {
   display: flex;
   width: 209.063px;
@@ -474,6 +480,7 @@ nav a {
   flex-shrink: 0;
   border-radius: 6px;
   border: 1px solid #FFF;
+  transition: 0.5s;
 }
 .banner_ourselv a {
   color: #FFF;
@@ -868,6 +875,10 @@ nav a {
   border-radius: 6px;
   border: 1px solid #000;
   background: #FCF4EB;
+  transition: 1.5s;
+}
+.Sellers_btn:hover {
+  background: #D24C2B;
 }
 .Sellers_btn a {
   display: flex;
@@ -1618,6 +1629,10 @@ video::-webkit-media-controls {
   flex-shrink: 0;
   border-radius: 6px;
   background: #D24C2B;
+  transition: 1.5s;
+}
+.Woman_someth:hover {
+  background: #141212;
 }
 .Woman_someth a {
   display: flex;
@@ -1644,6 +1659,10 @@ video::-webkit-media-controls {
   border-radius: 6px;
   border: 1px solid #000;
   background: #FCF4EB;
+  transition: 1.5s;
+}
+.Woman_abou:hover {
+  background: #D24C2B;
 }
 .Woman_abou a {
   display: flex;
@@ -1910,6 +1929,10 @@ video::-webkit-media-controls {
   height: 53px;
   border-radius: 10px;
   background-color: #D24C2B;
+  transition: 1.5s;
+}
+.footer_btn:hover {
+  background: #161515;
 }
 .footer_btn a {
   display: flex;
@@ -2362,6 +2385,10 @@ input[type="checkbox" i] {
   gap: 10px;
   border-radius: 6px;
   background: #D24C2B;
+  transition: 1.5s;
+}
+.PLANNERS-btn:hover {
+  background: #141212;
 }
 .PLANNERS-btn a {
   display: flex;
@@ -2473,6 +2500,10 @@ input[type="checkbox" i] {
   gap: 10px;
   border-radius: 6px;
   border: 1px solid #000;
+  transition: 1.5s;
+}
+.PLANNERS_notebook:hover {
+  background: #D24C2B;
 }
 .PLANNERS_notebook a {
   display: flex;
