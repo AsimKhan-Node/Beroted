@@ -2304,20 +2304,27 @@ video::-webkit-media-controls {
   padding-top: 30px;
   padding-bottom: 50px;
 }
-.PLANNERS_bold {
+
+.PLANNERS_bold{
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding-top: 30px;
-  gap: 20px;
   flex-wrap: wrap;
+  margin-inline: auto;
+  max-width: 40rem;
+  padding: 1vh;
 }
 .PLANNERS_fearl {
-  width: 9%;
+  width: 12%;
 }
-.PLANNERS_fearl img {
+.PLANNERS_fearl img{
   width: 100%;
-  height: auto;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.PLANNERS_bold:has(img:hover) img:not(:hover) {
+  scale: 0.8;
+  opacity: 0.5;
+  filter: grayscale(20%);
 }
 .PLANNERS_terat {
   display: flex;
