@@ -894,6 +894,13 @@ ul img {
   font-weight: 400;
   line-height: 100%;
 }
+.Sellers_lined {
+  display: flex;
+}
+.Sellers_lined img {
+  width: 100%;
+  height: auto;
+}
 /*------ Sellers end----*/
 @media screen and (max-width: 1200px) {
 /*---- Sellers stert -----*/
@@ -957,6 +964,23 @@ ul img {
 .Sellers_spira {
   width: 100%;
   gap: 12px;
+}
+.Sellers_Cart {
+  text-align: center;
+  margin: 0 auto;
+}
+.Sellers_lined {
+  display: flex;
+  text-align: center;
+  margin: 0 auto;
+}
+.Sellers_pages {
+  text-align: center;
+  margin: 0 auto;
+}
+.Sellers_custom {
+  text-align: center;
+  margin: 0 auto;
 }
 /*------ Sellers end----*/
 }
@@ -1802,11 +1826,11 @@ video::-webkit-media-controls {
   padding: 0 20px;
 }
 .VIDEO_willa {
-  bottom: 58px;
-  left: 4%;
+  bottom: 33px;
+  left: 0%;
 }
 .VIDEO_willa h2 {
-  font-size: 27px;
+  font-size: 28px;
   text-align: center;
 }
 /*------ VIDEO end----*/
@@ -2716,14 +2740,38 @@ input[type="checkbox" i] {
   padding: 16px;
   gap: 16px;
 }
+.PLANNERS_feave {
+  padding: 10px;
+  gap: 11px;
+  width: 100%;
+  flex-direction: column;
+}
+.Anmelden-box .Anmelden-checkbox {
+  width: 37px;
+  height: 39px;
+  padding: 9px;
+}
+.PLANNERS_check {
+  display: flex;
+}
+
+.PLANNERS_check img {
+  width: 100%;
+  height: auto;
+}
 .PLANNERS_ict h4 {
-  font-size: 15px;
+  font-size: 25px;
+  text-align: center;
 }
 .PLANNERS_ict p {
-  font-size: 16px;
+  font-size: 18px;
+  text-align: center;
 }
 .PLANNERS_ation {
   padding-top: 25px;
+}
+.PLANNERS_pens span {
+  font-size: 20px;
 }
 .PLANNERS_soft {
   padding-top: 14px;
@@ -2753,7 +2801,7 @@ input[type="checkbox" i] {
   gap: 17px;
 }
 .PLANNERS_notebook {
-  width: 185px;
+  width: 258px;
   height: 53px;
   gap: 7px;
 }
