@@ -926,7 +926,7 @@ ul img {
   height: auto;
 }
 .Sellers_btn {
-  width: 219px;
+  width: 284px;
   height: 47px;
   gap: 8px;
 }
@@ -982,6 +982,13 @@ ul img {
   margin: 0 auto;
 }
 .Sellers_custom {
+  text-align: center;
+  margin: 0 auto;
+}
+.Sellers_btn {
+  width: 327px;
+  height: 49px;
+  gap: 8px;
   text-align: center;
   margin: 0 auto;
 }
