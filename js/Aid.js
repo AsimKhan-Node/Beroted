@@ -1,10 +1,3 @@
-var sidemenu = document.getElementById("sidemenu");
-function openmenu(){
-  sidemenu.style.left = "0";
-}
-function closemenu(){
-  sidemenu.style.left = "-100%";
-}
 
 
 setTimeout(() => {
@@ -14,9 +7,25 @@ setTimeout(() => {
 
 
 const buttons = document.querySelectorAll('.faq-toggle');
-buttons.forEach(button =>{
-  button.addEventListener('click', () =>{
+
+buttons.forEach(button => {
+  button.addEventListener('click', () => {
+    buttons.forEach(btn => {
+      if (btn !== button) {
+        btn.parentNode.classList.remove('active');
+      }
+    });
     button.parentNode.classList.toggle('active');
   });
-})
+});
+
+
+var sidemenu = document.getElementById("sidemenu");
+
+function openmenu(){
+  sidemenu.style.left = "0";
+}
+function closemenu(){
+  sidemenu.style.left = "-100%";
+}
 
